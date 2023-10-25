@@ -1,0 +1,13 @@
+.hexSvg {
+  width: 50px;
+  margin: 0 auto;
+}
+.hex {
+  stroke-width: 6;
+  stroke: lightgrey;
+  fill-opacity: 1;
+  transition: fill-opacity 0.8s;
+}
+svg:hover .hex {
+  fill-opacity: 0.6;
+}
