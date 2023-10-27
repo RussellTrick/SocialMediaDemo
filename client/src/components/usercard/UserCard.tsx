@@ -25,7 +25,7 @@ const UserCard = ({
   if (!error) {
     const generateLines = (level: number) => {
       const lines = [];
-
+      //Loop through each line and generate them based on the level prop
       for (let i = 1; i <= level; i++) {
         let x1, y1, x2, y2, strokeColor;
 
@@ -92,7 +92,8 @@ const UserCard = ({
       return lines;
     };
 
-    // Add a unique ID for each user card. This is needed because multiple UserCards are on screen at once and therefore the pattern potentially references the wrong card
+    /* Add a unique ID for each user card. This is needed because multiple UserCards are on screen at once and therefore the pattern potentially references the wrong card.
+    It's possible to use a library for this such as UUID but I decided to use this method instead.*/
     const uniqueId = `img-${Math.random().toString(36).slice(2, 11)}`;
     return (
       <div className="d-flex py-1">

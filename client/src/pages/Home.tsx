@@ -7,6 +7,7 @@ import LeftNavbar from "../components/navbar/LeftNavbar.tsx";
 import HeaderImg from "../assets/img/header.png";
 import UserData from "../data/UserDummyData.json";
 import Logo from "../assets/img/react.svg";
+import GroupCard from "../components/groupcard/GroupCard.tsx";
 
 const Home = () => {
   // Sort users by createdDateTime in descending order
@@ -17,6 +18,10 @@ const Home = () => {
   );
   // Take the first 5 users
   const latestUsers = sortedUsers.slice(0, 5);
+
+  // Sort groups by memberCount in descending order
+
+  // Take the first 5 groups
 
   return (
     <>
@@ -31,8 +36,8 @@ const Home = () => {
         </header>
         <div className="row">
           <div className="col d-none d-lg-block">
-            <div className=" bg-white rounded-3 p-4 ">
-              <strong>Newest Members</strong>
+            <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
+              <strong className="mb-3">Newest Members</strong>
               {latestUsers.map((user, index) => (
                 <UserCard
                   key={index}
@@ -79,14 +84,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col d-none d-lg-block">
-            <div className="bg-white rounded-3 p-4">
-              <strong>Popular groups</strong>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.Donec id elit non mi porta
-                gravida at eget metus. Maecenas sed diam eget risus varius
-                blandit.
-              </p>
+            <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
+              <strong className="mb-3">Popular Groups</strong>
+              <GroupCard name={"New group"} memberCount={2} imageUrl={Logo} />
             </div>
           </div>
         </div>
