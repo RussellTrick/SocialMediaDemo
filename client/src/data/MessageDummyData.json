@@ -1,0 +1,22 @@
+[
+  {
+    "type": "update",
+    "content": "Just posted an update about my latest project!",
+    "timestamp": "2023-10-28T12:00:00Z",
+    "user_id": "user_12345"
+  },
+  {
+    "type": "reply",
+    "content": "Just posted an update about my latest project!",
+    "replyTarget": "Welcome to the Project group forum!",
+    "forum": "Project's R US",
+    "timestamp": "2023-10-28T12:15:00Z",
+    "user_id": "user_67890"
+  },
+  {
+    "type": "update",
+    "content": "Excited to share some new features we've been working on!",
+    "timestamp": "2023-10-28T12:30:00Z",
+    "user_id": "user_23456"
+  }
+]

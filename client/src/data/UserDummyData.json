@@ -11,7 +11,7 @@
   {
     "name": "Jane Smith",
     "handle": "JaneSmith123",
-    "pro": false,
+    "pro": true,
     "verified": true,
     "level": 5,
     "imageUrl": "",
