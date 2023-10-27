@@ -5,9 +5,12 @@ import UserCard from "../components/usercard/UserCard.tsx";
 import Photo from "../assets/img/pexels-photo-1036623.webp";
 import LeftNavbar from "../components/navbar/LeftNavbar.tsx";
 import HeaderImg from "../assets/img/header.png";
-import UserData from "../data/UserDummyData.json";
 import Logo from "../assets/img/react.svg";
 import GroupCard from "../components/groupcard/GroupCard.tsx";
+
+// Dummy Data to emulate api calls
+import UserData from "../data/UserDummyData.json";
+import GroupData from "../data/GroupDummyData.json";
 
 const Home = () => {
   // Sort users by createdDateTime in descending order
@@ -20,8 +23,12 @@ const Home = () => {
   const latestUsers = sortedUsers.slice(0, 5);
 
   // Sort groups by memberCount in descending order
+  const sortedGroups = GroupData.slice().sort(
+    (a, b) => b.memberCount - a.memberCount
+  );
 
-  // Take the first 5 groups
+  // Take the first 5 groups based on member count
+  const top5Groups = sortedGroups.slice(0, 5);
 
   return (
     <>
@@ -86,7 +93,14 @@ const Home = () => {
           <div className="col d-none d-lg-block">
             <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
               <strong className="mb-3">Popular Groups</strong>
-              <GroupCard name={"New group"} memberCount={2} imageUrl={Logo} />
+              {top5Groups.map((group) => (
+                <GroupCard
+                  name={group.name}
+                  memberCount={group.memberCount}
+                  imageUrl={group.imageUrl}
+                  priv={group.priv}
+                />
+              ))}
             </div>
           </div>
         </div>

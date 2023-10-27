@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Avengers Fan Club",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": false,
+    "memberCount": 256
+  },
+  {
+    "name": "Tech Enthusiasts",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": true,
+    "memberCount": 128
+  },
+  {
+    "name": "Fitness Junkies",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": false,
+    "memberCount": 180
+  },
+  {
+    "name": "Book Lovers",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": true,
+    "memberCount": 98
+  },
+  {
+    "name": "Foodies United",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": false,
+    "memberCount": 312
+  },
+  {
+    "name": "Travel Enthusiasts",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": true,
+    "memberCount": 420
+  },
+  {
+    "name": "Artistic Creations",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": true,
+    "memberCount": 76
+  },
+  {
+    "name": "Gaming Society",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": false,
+    "memberCount": 512
+  },
+  {
+    "name": "Music Lovers",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": true,
+    "memberCount": 240
+  },
+  {
+    "name": "Film Buffs",
+    "imageUrl": "../assets/img/react.svg",
+    "priv": false,
+    "memberCount": 168
+  }
+]
