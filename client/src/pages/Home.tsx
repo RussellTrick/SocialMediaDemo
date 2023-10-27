@@ -1,40 +1,57 @@
-import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import UserCard from "../components/usercard/UserCard.tsx";
 import Photo from "../assets/img/pexels-photo-1036623.webp";
 import LeftNavbar from "../components/navbar/LeftNavbar.tsx";
+import HeaderImg from "../assets/img/header.png";
+import UserData from "../data/UserDummyData.json";
+import Logo from "../assets/img/react.svg";
 
 const Home = () => {
+  // Sort users by createdDateTime in descending order
+  const sortedUsers = UserData.sort(
+    (a, b) =>
+      new Date(b.createdDateTime).valueOf() -
+      new Date(a.createdDateTime).valueOf() //valueOf not needed but TypeScript will complain otherwise
+  );
+  // Take the first 5 users
+  const latestUsers = sortedUsers.slice(0, 5);
+
   return (
     <>
       <LeftNavbar />
       <div className="container">
-        <header className="header bg-primary rounded-3 my-4">
+        <header className="rounded-3 my-4">
           <img
-            src="header-image.jpg"
+            src={HeaderImg}
             alt="Header"
-            className="header-image img-fluid"
+            className="header-image img-fluid rounded-4"
           />
         </header>
         <div className="row">
-          <div className="col">
-            <div className=" bg-white rounded-3 p-4 d-none d-md-block">
+          <div className="col d-none d-lg-block">
+            <div className=" bg-white rounded-3 p-4 ">
               <strong>Newest Members</strong>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.Donec id elit non mi porta
-                gravida at eget metus. Maecenas sed diam eget risus varius
-                blandit.
-              </p>
+              {latestUsers.map((user, index) => (
+                <UserCard
+                  key={index}
+                  name={user.name}
+                  handle={user.handle}
+                  imageUrl={Photo}
+                  level={user.level}
+                  verified={user.verified}
+                />
+              ))}
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="bg-white rounded-3 p-4 mb-3">
+          <div className="col-lg-6 col-md-12">
+            <div className="bg-white rounded-3 mb-3">
               <div className="d-flex justify-content-between">
-                <strong>All Updates</strong>
-                <Dropdown className="d-inline mx-2" autoClose="outside">
+                <div className="h-100 p-4 d-flex justify-content-center align-items-center border-bottom border-tertiary border-4">
+                  <strong>All Updates</strong>
+                </div>
+                <Dropdown className="d-inline mx-2 p-4" autoClose="outside">
                   <Dropdown.Toggle
                     id="dropdown-autoclose-outside"
                     className="text-black bg-white"
@@ -51,16 +68,17 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-white rounded-3 p-4 mb-3">
-              <UserCard
-                name={"John Doe"}
-                handle={"JohnAtDoe"}
-                imageUrl={Photo}
-                level={2}
-                verified
-              ></UserCard>
+              <div>
+                <UserCard
+                  name={"John Doe"}
+                  imageUrl={Logo}
+                  level={2}
+                  verified
+                />
+              </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col d-none d-lg-block">
             <div className="bg-white rounded-3 p-4">
               <strong>Popular groups</strong>
               <p>

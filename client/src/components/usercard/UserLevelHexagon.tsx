@@ -30,10 +30,10 @@ const UserLevelHexagon = (props: UserLevel) => {
       />
       <text
         className={styles.text}
-        font-size="50"
+        fontSize="50"
         x="50"
         y="66"
-        text-anchor="middle"
+        textAnchor="middle"
       >
         {props.level.toString()}
       </text>

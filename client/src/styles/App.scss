@@ -16,6 +16,9 @@
   background-color: $tertiary;
 }
 
+.border-tertiary {
+  border-color: $tertiary !important;
+}
 .input-group input {
   color: white !important;
 }

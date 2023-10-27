@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./UserCard.module.scss";
 import UserLevelHexagon from "./UserLevelHexagon";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
@@ -92,6 +91,9 @@ const UserCard = ({
 
       return lines;
     };
+
+    // Add a unique ID for each user card. This is needed because multiple UserCards are on screen at once and therefore the pattern potentially references the wrong card
+    const uniqueId = `img-${Math.random().toString(36).slice(2, 11)}`;
     return (
       <div className="d-flex py-1">
         <div className="mx-2">
@@ -104,7 +106,7 @@ const UserCard = ({
             >
               <defs>
                 <pattern
-                  id="img"
+                  id={uniqueId}
                   patternUnits="userSpaceOnUse"
                   width="100"
                   height="100"
@@ -120,7 +122,7 @@ const UserCard = ({
               <polygon
                 className={styles.hex}
                 points="50 1 95 25 95 75 50 99 5 75 5 25"
-                fill="url(#img)"
+                fill={`url(#${uniqueId})`}
               />
               {generateLines(level)}
             </svg>

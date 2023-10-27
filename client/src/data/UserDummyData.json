@@ -1,0 +1,92 @@
+[
+  {
+    "name": "John Doe",
+    "handle": "JohnAtDoe",
+    "pro": true,
+    "verified": true,
+    "level": 3,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-28T10:30:00Z"
+  },
+  {
+    "name": "Jane Smith",
+    "handle": "JaneSmith123",
+    "pro": false,
+    "verified": true,
+    "level": 5,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-27T14:20:00Z"
+  },
+  {
+    "name": "Sam Johnson",
+    "handle": "SamJ",
+    "pro": true,
+    "verified": false,
+    "level": 2,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-26T09:45:00Z"
+  },
+  {
+    "name": "Alex Brown",
+    "handle": "AlexB",
+    "pro": false,
+    "verified": true,
+    "level": 6,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-25T16:55:00Z"
+  },
+  {
+    "name": "Emily Davis",
+    "handle": "EmilyD",
+    "pro": true,
+    "verified": true,
+    "level": 4,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-24T12:10:00Z"
+  },
+  {
+    "name": "Michael Clark",
+    "handle": "MClark",
+    "pro": false,
+    "verified": false,
+    "level": 1,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-23T19:30:00Z"
+  },
+  {
+    "name": "Olivia Wilson",
+    "handle": "OWilson",
+    "pro": true,
+    "verified": true,
+    "level": 3,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-22T15:40:00Z"
+  },
+  {
+    "name": "Ethan Harris",
+    "handle": "EHarris",
+    "pro": true,
+    "verified": true,
+    "level": 2,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-21T11:20:00Z"
+  },
+  {
+    "name": "Emma Young",
+    "handle": "EYoung",
+    "pro": false,
+    "verified": true,
+    "level": 5,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-20T18:05:00Z"
+  },
+  {
+    "name": "William Turner",
+    "handle": "WTurner",
+    "pro": true,
+    "verified": false,
+    "level": 4,
+    "imageUrl": "",
+    "createdDateTime": "2023-10-19T13:50:00Z"
+  }
+]
