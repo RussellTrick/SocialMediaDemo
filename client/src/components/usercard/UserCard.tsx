@@ -24,12 +24,32 @@ const UserCard = ({
   level,
 }: UserCardProps) => {
   if (!error) {
-    return (
-      <>
-        {!imageless && imageUrl && level ? (
+    if (!imageless && imageUrl && level) {
+      return (
+        <article className="d-flex ">
           <CardImage imageUrl={imageUrl} level={level} />
-        ) : null}
-        <article className="d-flex flex-column">
+          <div className="d-flex flex-column py-1">
+            <span className="fw-bold">
+              {name}{" "}
+              {verified && (
+                <FontAwesomeIcon
+                  icon={faCircleCheck}
+                  style={{ color: "#00a1ee" }}
+                />
+              )}{" "}
+              {pro && (
+                <span className="small text-white rounded-4 bg-primary fw-normal p-1">
+                  Pro Member
+                </span>
+              )}{" "}
+            </span>
+            {handle && <span className="small text-muted">@{handle}</span>}
+          </div>
+        </article>
+      );
+    } else {
+      return (
+        <>
           <span className="fw-bold">
             {name}{" "}
             {verified && (
@@ -45,9 +65,9 @@ const UserCard = ({
             )}{" "}
           </span>
           {handle && <span className="small text-muted">@{handle}</span>}
-        </article>
-      </>
-    );
+        </>
+      );
+    }
   } else {
     return <p>{error}</p>;
   }

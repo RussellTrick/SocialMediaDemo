@@ -2,15 +2,16 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import UserCard from "../components/usercard/UserCard.tsx";
-import Photo from "../assets/img/pexels-photo-1036623.webp";
 import LeftNavbar from "../components/navbar/LeftNavbar.tsx";
 import HeaderImg from "../assets/img/header.png";
-import Logo from "../assets/img/react.svg";
 import GroupCard from "../components/groupcard/GroupCard.tsx";
+import PostHandler from "../components/post/PostHandler.tsx";
 
 // Dummy Data to emulate api calls
 import UserData from "../data/UserDummyData.json";
 import GroupData from "../data/GroupDummyData.json";
+import Photo from "../assets/img/pexels-photo-1036623.webp";
+import PostData from "../data/MessageDummyData.json";
 
 const Home = () => {
   // Sort users by createdDateTime in descending order
@@ -46,18 +47,20 @@ const Home = () => {
             <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
               <strong className="mb-3">Newest Members</strong>
               {latestUsers.map((user, index) => (
-                <UserCard
-                  key={index}
-                  name={user.name}
-                  handle={user.handle}
-                  imageUrl={Photo}
-                  level={user.level}
-                  verified={user.verified}
-                />
+                <div className="d-flex py-1">
+                  <UserCard
+                    key={index}
+                    name={user.name}
+                    handle={user.handle}
+                    imageUrl={Photo}
+                    level={user.level}
+                    verified={user.verified}
+                  />
+                </div>
               ))}
             </div>
           </div>
-          <div className="col-lg-6 col-md-12">
+          <main className="col-lg-6 col-md-12">
             <div className="bg-white rounded-3 mb-3">
               <div className="d-flex justify-content-between">
                 <div className="h-100 p-4 d-flex justify-content-center align-items-center border-bottom border-tertiary border-4">
@@ -80,16 +83,17 @@ const Home = () => {
               </div>
             </div>
             <div className="bg-white rounded-3 p-4 mb-3">
-              <div>
-                <UserCard
-                  name={"John Doe"}
-                  imageUrl={Logo}
-                  level={2}
-                  verified
-                />
-              </div>
+              <PostHandler
+                type={PostData[1].type}
+                content={PostData[1].content}
+                timestamp={PostData[1].timestamp}
+                forum={PostData[1].forum}
+                user={UserData[1]}
+                replyTarget={PostData[1].replyTarget}
+              />
             </div>
-          </div>
+          </main>
+
           <div className="col d-none d-lg-block">
             <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
               <strong className="mb-3">Popular Groups</strong>
@@ -97,7 +101,7 @@ const Home = () => {
                 <GroupCard
                   name={group.name}
                   memberCount={group.memberCount}
-                  imageUrl={group.imageUrl}
+                  imageUrl={Photo}
                   priv={group.priv}
                 />
               ))}
