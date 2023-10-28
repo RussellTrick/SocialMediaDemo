@@ -38,7 +38,7 @@ const UserCard = ({
                 />
               )}{" "}
               {pro && (
-                <span className="small text-white rounded-4 bg-primary fw-normal p-1">
+                <span className="small text-white rounded-4 bg-primary fw-normal">
                   Pro Member
                 </span>
               )}{" "}

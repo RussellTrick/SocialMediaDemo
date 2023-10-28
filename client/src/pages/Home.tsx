@@ -35,7 +35,7 @@ const Home = () => {
     <>
       <LeftNavbar />
       <div className="container">
-        <header className="rounded-3 my-4">
+        <header className="rounded-4 my-4">
           <img
             src={HeaderImg}
             alt="Header"
@@ -44,7 +44,7 @@ const Home = () => {
         </header>
         <div className="row">
           <div className="col d-none d-lg-block">
-            <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
+            <div className="bg-white rounded-4 p-4 d-flex flex-column gap-3">
               <strong className="mb-3">Newest Members</strong>
               {latestUsers.map((user, index) => (
                 <div className="d-flex py-1">
@@ -61,12 +61,12 @@ const Home = () => {
             </div>
           </div>
           <main className="col-lg-6 col-md-12">
-            <div className="bg-white rounded-3 mb-3">
+            <div className="bg-white rounded-4 mb-3">
               <div className="d-flex justify-content-between">
                 <div className="h-100 p-4 d-flex justify-content-center align-items-center border-bottom border-tertiary border-4">
                   <strong>All Updates</strong>
                 </div>
-                <Dropdown className="d-inline mx-2 p-4" autoClose="outside">
+                <Dropdown className="d-inline mx-2 p-3" autoClose="outside">
                   <Dropdown.Toggle
                     id="dropdown-autoclose-outside"
                     className="text-black bg-white"
@@ -82,7 +82,7 @@ const Home = () => {
                 </Dropdown>
               </div>
             </div>
-            <div className="bg-white rounded-3 p-4 mb-3">
+            <div className="bg-white rounded-4 p-4 mb-3">
               <PostHandler
                 type={PostData[1].type}
                 content={PostData[1].content}
@@ -95,7 +95,7 @@ const Home = () => {
           </main>
 
           <div className="col d-none d-lg-block">
-            <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3">
+            <div className="bg-white rounded-4 p-4 d-flex flex-column gap-3">
               <strong className="mb-3">Popular Groups</strong>
               {top5Groups.map((group) => (
                 <GroupCard
