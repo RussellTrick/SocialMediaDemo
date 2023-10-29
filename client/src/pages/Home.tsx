@@ -14,7 +14,6 @@ import Badges from "../components/badges/Badges.tsx";
 // Dummy Data to emulate api calls
 import UserData from "../data/UserDummyData.json";
 import GroupData from "../data/GroupDummyData.json";
-import Photo from "../assets/img/pexels-photo-1036623.webp";
 import PostData from "../data/MessageDummyData.json";
 
 const Home = () => {
@@ -139,7 +138,7 @@ const Home = () => {
                   <GroupCard
                     name={group.name}
                     memberCount={group.memberCount}
-                    imageUrl={Photo}
+                    imageUrl={getRandomImageUrl()}
                     priv={group.priv}
                   />
                 ))}
