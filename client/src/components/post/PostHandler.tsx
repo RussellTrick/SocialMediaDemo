@@ -4,6 +4,8 @@ import CardImage from "../usercard/CardImage";
 import { timeAgo } from "../../helpers/utils";
 import { faFaceGrinSquint } from "@fortawesome/free-solid-svg-icons";
 import { UserType } from "../../types/types";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 type CommentType = {
   user: UserCardProps;
@@ -44,7 +46,16 @@ const PostHandler = ({
 }: PostHandlerProps) => {
   const commentsCount: number = comments?.comments?.length || 0;
   const sharesCount: number = shares?.shares?.length || 0;
-  const reactionsCount: number = reactions?.length || 0;
+  const [reactionsCount, setReactionsCount] = useState(reactions?.length || 0);
+  const [incrementing, setIncrementing] = useState(true);
+
+  // Add api call to also increment/decrement reacts
+  const toggleReaction = () => {
+    setReactionsCount((prevCount) => {
+      return incrementing ? prevCount + 1 : prevCount - 1;
+    });
+    setIncrementing((prev) => !prev);
+  };
 
   const renderPostHeader = () => {
     switch (type) {
@@ -90,10 +101,16 @@ const PostHandler = ({
         <p className="small text-muted mb-4">{content}</p>
       </div>
       <div className="row d-flex justify-content-between pt-2 px-2 flex-nowrap">
-        <div className="col-2">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          whileTap={{ scale: 0.9 }}
+          className="col-2 user-select-none"
+          onClick={toggleReaction}
+        >
           <FontAwesomeIcon icon={faFaceGrinSquint} color="orange" size="lg" />
           <strong className="small ms-1">{reactionsCount}</strong>
-        </div>
+        </motion.div>
 
         <div className="col-5 col-md-6 col-lg-5 d-flex justify-content-evenly">
           <strong className="small">{commentsCount} Comments</strong>

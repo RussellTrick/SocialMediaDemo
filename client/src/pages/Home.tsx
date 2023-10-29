@@ -8,6 +8,8 @@ import GroupCard from "../components/groupcard/GroupCard.tsx";
 import PostHandler from "../components/post/PostHandler.tsx";
 import { useEffect, useState } from "react";
 import Loader from "../components/loader/Loader.tsx";
+import Quest from "../components/quest/Quest.tsx";
+import Badges from "../components/badges/Badges.tsx";
 
 // Dummy Data to emulate api calls
 import UserData from "../data/UserDummyData.json";
@@ -86,6 +88,10 @@ const Home = () => {
               </div>
               <div className="bg-white rounded-4 p-4 d-flex flex-column gap-3 mb-3">
                 <strong className="mb-3">Quests</strong>
+                <Quest
+                  name="Posting Machine"
+                  description="Posted more than 20 profile activities in one day"
+                />
               </div>
             </div>
             <main className="col-lg-6 col-md-12">
@@ -140,6 +146,11 @@ const Home = () => {
               </div>
               <div className="bg-white rounded-4 p-4 d-flex flex-column gap-3 mb-3">
                 <strong className="mb-3">Badges</strong>
+                <Badges
+                  name="Globe Trotter"
+                  description="Has joined at least 10 different groups"
+                  completed
+                ></Badges>
               </div>
             </div>
           </div>

@@ -57,3 +57,27 @@ body {
   width: 45px;
   height: 45px;
 }
+
+.incomplete-background {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.complete-background {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: $tertiary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
