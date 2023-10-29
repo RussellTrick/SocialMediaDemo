@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserCard, { UserCardProps } from "../usercard/UserCard";
 import CardImage from "../usercard/CardImage";
 import { timeAgo } from "../../helpers/utils";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faFaceGrinSquint } from "@fortawesome/free-solid-svg-icons";
 import { UserType } from "../../types/types";
 
 type CommentType = {
@@ -91,7 +91,7 @@ const PostHandler = ({
       </div>
       <div className="row d-flex justify-content-between pt-2 px-2 flex-nowrap">
         <div className="col-2">
-          <FontAwesomeIcon icon={faSmile} />
+          <FontAwesomeIcon icon={faFaceGrinSquint} color="orange" size="lg" />
           <strong className="small ms-1">{reactionsCount}</strong>
         </div>
 

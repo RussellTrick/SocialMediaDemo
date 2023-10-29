@@ -7,7 +7,7 @@ import HeaderImg from "../assets/img/header.png";
 import GroupCard from "../components/groupcard/GroupCard.tsx";
 import PostHandler from "../components/post/PostHandler.tsx";
 import { useEffect, useState } from "react";
-import Loader from "../components/shimmer/Loader.tsx";
+import Loader from "../components/loader/Loader.tsx";
 
 // Dummy Data to emulate api calls
 import UserData from "../data/UserDummyData.json";
@@ -18,6 +18,9 @@ import PostData from "../data/MessageDummyData.json";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  //************************************************************************************ */
+  // REFACTOR AFTER API IMPLEMENTATION
+
   // Simulate calling an api
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -25,6 +28,13 @@ const Home = () => {
     }, 2000);
     return () => clearTimeout(timeout);
   }, []);
+
+  const getRandomImageUrl = () => {
+    const randomImageId = Math.floor(Math.random() * 1000); // Generate a random number between 0 and 999
+    return `https://picsum.photos/300/300?image=${randomImageId}`;
+  };
+
+  //************************************************************************************ */
 
   // Sort users by createdDateTime in descending order
   const sortedUsers = UserData.sort(
@@ -67,7 +77,7 @@ const Home = () => {
                       key={index}
                       name={user.name}
                       handle={user.handle}
-                      imageUrl={Photo}
+                      imageUrl={getRandomImageUrl()}
                       level={user.level}
                       verified={user.verified}
                     />
@@ -100,16 +110,20 @@ const Home = () => {
                   </Dropdown>
                 </div>
               </div>
-              <div className="bg-white rounded-4 p-4 mb-3">
-                <PostHandler
-                  type={PostData[1].type}
-                  content={PostData[1].content}
-                  timestamp={PostData[1].timestamp}
-                  forum={PostData[1].forum}
-                  user={UserData[1]}
-                  replyTarget={PostData[1].replyTarget}
-                />
-              </div>
+
+              {PostData.map((post, index) => (
+                <div className="bg-white rounded-4 p-4 mb-3">
+                  <PostHandler
+                    key={index}
+                    type={post.type}
+                    content={post.content}
+                    timestamp={post.timestamp}
+                    user={UserData[1]} // This would be another api call based on what post.user returned
+                    forum={post.forum || undefined}
+                    replyTarget={post.replyTarget || undefined}
+                  />
+                </div>
+              ))}
             </main>
 
             <div className="col d-none d-lg-block">
