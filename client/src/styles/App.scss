@@ -13,7 +13,7 @@
 }
 
 .bg-tertiary {
-  background-color: $tertiary;
+  background-color: $tertiary !important;
 }
 
 .border-tertiary {
@@ -28,8 +28,17 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #f8f8fb;
+  padding-top: 100px;
 }
 
 .sidebar .active {

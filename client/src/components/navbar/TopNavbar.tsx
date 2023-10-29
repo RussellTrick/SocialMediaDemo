@@ -8,7 +8,7 @@ import { faAngleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function TopNavBar() {
   return (
-    <Navbar expand="lg pb-3 z-2" className="bg-primary">
+    <Navbar expand="lg pb-3 z-2" className="bg-primary fixed-top">
       <Container fluid>
         <Navbar.Brand href="#home" className="text-white">
           <img

@@ -17,7 +17,7 @@ const LeftNavbar = () => {
   const iconColor = "#aaadc7";
   return (
     <>
-      <Navbar className="position-absolute top-0 start-0 vh-100 bg-white z-1  d-none d-xxl-flex">
+      <Navbar className="position-fixed top-0 start-0 vh-100 bg-white z-1 d-none d-xxl-flex">
         <Nav className="py-3 ps-2 pe-3 d-flex flex-column align-items-center h-75 justify-content-around sidebar">
           <Nav.Link as={NavLink} to="/" className="rounded-3">
             <FontAwesomeIcon
