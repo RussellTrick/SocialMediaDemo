@@ -64,9 +64,8 @@ npm run dev
 - All components adhere to SRP and are easily customisable with Modular SCSS.
 - Usage of bootstraps grid system for a reponsive design
 ## Features
- - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level, it also takes optional props to display the Pro and Verified badges:  
-   ![Level 5 User](img/Level-5-user.JPG)  
-   ![Level 3 User](img/Level-3-user.JPG)
+ - The UserCard component reacts to a users level. The components border and value in the small hexagon corresponds to a users current level, it also takes optional props to display the Pro and Verified badges:  
+   ![Level 5 User](img/Level-5-user.JPG) ![Level 3 User](img/Level-3-user.JPG)
 
  - The page is fully responsive and works on the screen sizes with appropriate styling for each
 
