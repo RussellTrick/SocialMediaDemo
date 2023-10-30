@@ -20,7 +20,7 @@
   <a href="#usage">How To Use</a> •
   <a href="#video-demo">Video Demo</a> •
   <a href="#notes">Notes</a> •
-  <a href="#credits">Credits</a> •
+  <a href="#credits">Features</a> •
 </p>    
 
 ## About The Project
@@ -59,3 +59,10 @@ npm run dev
    - Encrypted, hashed, salt and peppered passwords
    - http-only cookies to guard against XSS attacks
    - When calling the Posts API I would paginate the collection so that I can render only the newest posts in the client straight away allowing for better peformance
+
+## Features
+ - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level:
+
+ - The page is fully responsive and works on the screen sizes with appropriate styling for each:
+
+ - The LeftNavBar routing is properly set up to align with React taking advantages of Reacts DOM manipulation
