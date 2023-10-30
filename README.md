@@ -63,8 +63,8 @@ npm run dev
 - Usage of bootstraps grid system for a reponsive design
 ## Features
  - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level:  
-   ![Level 5 User](img/Level-5-User.jpg)  
-   ![Level 3 User](img/Level-3-User.jpg)
+   ![Level 5 User](img/Level-5-user.jpg)  
+   ![Level 3 User](img/Level-3-user.jpg)
 
  - The page is fully responsive and works on the screen sizes with appropriate styling for each
 
