@@ -62,9 +62,10 @@ npm run dev
 - All components adhere to SRP and are easily customisable with Modular SCSS.
 - Usage of bootstraps grid system for a reponsive design
 ## Features
- - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level:
-   ![Level 5 User](img/Level-5-User.jpg) ![Level 3 User](img/Level-3-User.jpg)
+ - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level:  
+   ![Level 5 User](img/Level-5-User.jpg)  
+   ![Level 3 User](img/Level-3-User.jpg)
 
- - The page is fully responsive and works on the screen sizes with appropriate styling for each:
+ - The page is fully responsive and works on the screen sizes with appropriate styling for each
 
  - The LeftNavBar routing is properly set up to align with React taking advantages of Reacts DOM manipulation
