@@ -54,7 +54,8 @@ npm install
 npm run dev
 ```
 
-## Video Demo
+## Video Demo  
+[![Video Demo on YouTube](https://img.youtube.com/vi/SguPLko0U6g/0.jpg)](https://youtu.be/SguPLko0U6g)
 
 ## Notes
  - The full-stack part of this application is not yet developed but would involve the following:
