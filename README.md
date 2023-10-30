@@ -59,9 +59,11 @@ npm run dev
    - Encrypted, hashed, salt and peppered passwords
    - http-only cookies to guard against XSS attacks
    - When calling the Posts API I would paginate the collection so that I can render only the newest posts in the client straight away allowing for better peformance
-
+- All components adhere to SRP and are easily customisable with Modular SCSS.
+- Usage of bootstraps grid system for a reponsive design
 ## Features
  - The UserCard component reactcs to a users level. The components border and value in the small hexagon corresponds to a users current level:
+   ![Level 5 User](img/Level-5-User.jpg) ![Level 3 User](img/Level-3-User.jpg)
 
  - The page is fully responsive and works on the screen sizes with appropriate styling for each:
 
