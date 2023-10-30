@@ -21,6 +21,7 @@
   <a href="#video-demo">Video Demo</a> •
   <a href="#notes">Notes</a> •
   <a href="#features">Features</a> •
+  <a href="#license">License</a> •
 </p>    
 
 ## About The Project
@@ -71,3 +72,6 @@ npm run dev
  - The LeftNavBar routing is properly set up to align with React taking advantages of Reacts DOM manipulation
 
  - Animated Loading bar and onHover/onClick Reactions emoji animations
+
+## License
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
