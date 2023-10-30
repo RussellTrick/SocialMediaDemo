@@ -20,7 +20,7 @@
   <a href="#usage">How To Use</a> •
   <a href="#video-demo">Video Demo</a> •
   <a href="#notes">Notes</a> •
-  <a href="#credits">Features</a> •
+  <a href="#features">Features</a> •
 </p>    
 
 ## About The Project
