@@ -69,3 +69,5 @@ npm run dev
  - The page is fully responsive and works on the screen sizes with appropriate styling for each
 
  - The LeftNavBar routing is properly set up to align with React taking advantages of Reacts DOM manipulation
+
+ - Animated Loading bar and onHover/onClick Reactions emoji animations
