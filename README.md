@@ -21,7 +21,7 @@
   <a href="#video-demo">Video Demo</a> •
   <a href="#notes">Notes</a> •
   <a href="#features">Features</a> •
-  <a href="#license">License</a> •
+  <a href="#license">License</a>
 </p>    
 
 ## About The Project
