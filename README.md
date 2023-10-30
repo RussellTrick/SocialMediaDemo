@@ -68,9 +68,9 @@ npm run dev
    ![Level 5 User](img/Level-5-user.JPG)  
    ![Level 3 User](img/Level-3-user.JPG)
 
- - The page is fully responsive and works on the screen sizes with appropriate styling for each
+ - The page is fully responsive and works on all screen sizes with appropriate styling for each
 
- - The LeftNavBar routing is properly set up to align with React taking advantages of Reacts DOM manipulation
+ - The LeftNavBar routing is properly set up to align with Reacts rules, taking advantages of Reacts DOM manipulation
 
  - Animated Loading bar and onHover/onClick Reactions emoji animations
 
