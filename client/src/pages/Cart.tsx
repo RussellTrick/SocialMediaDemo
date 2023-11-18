@@ -1,4 +1,3 @@
-import React from "react";
 import LeftNavbar from "../components/navbar/LeftNavbar";
 import { Container } from "react-bootstrap";
 

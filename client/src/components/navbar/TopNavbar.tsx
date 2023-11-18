@@ -9,6 +9,11 @@ import UserCard from "../usercard/UserCard";
 import LoginModal from "../loginmodal/LoginModal";
 import { useState } from "react";
 
+// *************
+// Mock login
+import UserData from "../../data/UserDummyData.json";
+// *************
+
 function TopNavBar() {
   const loggedIn = false;
   const [showModal, setShowModal] = useState(false);
@@ -98,7 +103,7 @@ function TopNavBar() {
           </form>
           <div className="col d-flex justify-content-end py-1">
             {loggedIn ? (
-              <UserCard />
+              <UserCard name={UserData[1].name} />
             ) : (
               <button
                 className="btn btn-light ms-2 bg-tertiary text-white border-0 rounded-3 "
