@@ -5,8 +5,17 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../../assets/img/react.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
+import UserCard from "../usercard/UserCard";
+import LoginModal from "../loginmodal/LoginModal";
+import { useState } from "react";
 
 function TopNavBar() {
+  const loggedIn = false;
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   return (
     <Navbar expand="lg pb-3 z-2" className="bg-primary fixed-top">
       <Container fluid>
@@ -88,12 +97,18 @@ function TopNavBar() {
             </div>
           </form>
           <div className="col d-flex justify-content-end py-1">
-            <button
-              className="btn btn-light ms-2 bg-tertiary text-white border-0 rounded-3 "
-              style={{ height: "50px" }}
-            >
-              Login
-            </button>
+            {loggedIn ? (
+              <UserCard />
+            ) : (
+              <button
+                className="btn btn-light ms-2 bg-tertiary text-white border-0 rounded-3 "
+                style={{ height: "50px" }}
+                onClick={handleShow}
+              >
+                Login
+              </button>
+            )}
+            <LoginModal show={showModal} onHide={handleClose} />
           </div>
         </Navbar.Collapse>
       </Container>
